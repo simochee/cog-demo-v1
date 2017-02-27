@@ -1,0 +1,31 @@
+{
+  "name": "cog-demo-v1",
+  "version": "1.0.0",
+  "description": "COG災害支援アプリ - Demo",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simochee/cog-demo-v1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simochee/cog-demo-v1/issues"
+  },
+  "homepage": "https://github.com/simochee/cog-demo-v1#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-pug": "^3.2.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-stylus": "^2.6.0"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "ionicons": "^3.0.0"
+  }
+}
