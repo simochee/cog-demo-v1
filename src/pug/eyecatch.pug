@@ -9,9 +9,33 @@ head
 body
 
     .container
-        .virtual-device
-            .map-canvas
-            
-            .nav-header
-                .current-position-btn(data-label="現在地")
-                    span.fa.fa-location-arrow.btn-light
+        .navbar
+            .left
+                .notices
+                    .budge 2
+                    .icon
+                        span.fa.fa-comment
+            .center
+                ul.modes
+                    li 支援情報
+                    li.active マップ
+                    li 非常発信
+            .right
+                .menu-icon
+                    span.fa.fa-bars
+
+        .info-box
+            span.icon.fa.fa-exclamation-circle
+            span.message
+                span.bold 大雨洪水警報
+                | が発令中です
+
+        .call-btn
+            span.icon.fa.fa-rss
+            span.label 非常発信
+
+        .map-canvas#mapCanvas
+
+    
+    script(src="assets/map.js")
+    script(async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyB1MvBwgJLjGPVzmIXlyf4_Kz8Pg7-UJxA&callback=initMap")

@@ -1,3 +1,5 @@
+@import "_fonts"
+
 *
     margin 0
     padding 0
@@ -7,49 +9,150 @@ html, body
     height 100%
 
 body
-    & > .container
+    font-family "Hiragino Sans", sans-serif
+    font-weight 400
+
+ul, ol
+    list-style-type none
+
+.container
+    position relative
+    width 100%
+    height 100%
+
+.navbar
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 50px
+    // box-shadow inset 0 40px 40px -20px #fff
+    .left
+        position absolute
+        top 0
+        left 0
+    .center
+        margin 0 auto
+    .right
+        position absolute
+        top: 0
+        right 0
+    .notices
+        width 80px
+        height 50px
+        .budge
+            position absolute
+            text-align center
+            line-height 50px
+            width 80px
+            height 50px
+            color #fff
+            font-size 13px
+            font-weight 200
+            z-index 1
+        .icon
+            position absolute
+            top -2.5px
+            left 0
+            display block
+            width 80px
+            height 50px
+            text-align center
+            line-height 50px
+            font-size 40px
+            color rgba(#333, .95)
+    .modes
         display flex
         align-items center
         justify-content center
+        width 250px
+        height 50px
+        margin 0 auto
+        li
+            width 70px
+            margin 0 5px
+            text-align center
+            line-height 32px
+            font-size 14px
+            color rgba(#222, .6)
+            font-weight 600
+            &.active
+                border-bottom 3px solid  #222
+                font-weight 800
+                color #222
+    .menu-icon
+        width 60px
+        height 50px
+        line-height 50px
+        text-align center
+        font-size 26px
+        color rgba(#333, .8)
+
+.call-btn
+    position absolute
+    bottom 30px
+    left 10px
+    right 10px
+    width auto
+    height 70px
+    background #FD1A99
+    color #fff
+    .label
+        display block
         width 100%
-        height 100%
-        background #555
-        & > .virtual-device
-            overflow-y scroll
-            width 360px
-            height 640px
-            background #fff
-            @media (max-width: 640px)
-                &
-                    overflow-y auto
-                    width 100%
-                    height 100%
-            .map-canvas
-                width 100%
-                height 100%
-                background skyblue
-            .nav-header
-                position absolute
-                top 0
-                left 0
-                width 100%
-                .btn-light
-                    position relative
-                    width 50px
-                    height 50px
-                    background rgba(#fff, .5)
-                    border 1px solid  rgba(#fff, .7)
-                    box-shadow 0 0 3px rgba(#000, .4)
-                    line-height 50px
-                    text-align center
-                    color #222
-                    &::after
-                        content '現在地'
-                        position absolute
-                        left 0
-                        bottom -20px
-                        width 100%
-                        height 20px
-                        line-height 20px
-                        text-align center
-                        font-size 15px
+        height 70px
+        line-height 70px
+        text-align center
+        font-weight 400
+        font-size 22px
+        letter-spacing .2em
+        text-indent .2em
+    .icon
+        position absolute
+        top 0
+        left 0
+        width 70px
+        height 70px
+        line-height 70px
+        text-align center
+        font-size 25px
+        
+.info-box
+    position absolute
+    top 60px
+    left 10px
+    height 50px
+    padding 0 12px
+    background #fff
+    box-sizing border-box
+    border 2px solid  #fd1a99
+    .icon
+        position absolute
+        top 0
+        left 0
+        display block
+        width 50px
+        height 50px
+        color #fd1a99
+        text-align center
+        line-height 50px
+        font-size 20px
+    .message
+        padding-left 25px
+        line-height 50px
+        font-size 13px
+        font-weight 600
+        color #555
+        .bold
+            margin 0 4px
+            font-size 18px
+            color #000
+
+.map-canvas
+    position absolute
+    top 0
+    left 0
+    bottom 0
+    right 0
+    z-index -1
+
